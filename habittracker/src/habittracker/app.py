@@ -45,14 +45,14 @@ class HabitApp(toga.App):
     def save_results(self, widget):
         """Collect the on/off state of each switch and persist it."""
         results = [
-            {"habit": sw.label, "done": sw.is_on}
+            {"habit": sw.text, "done": sw.value}
             for sw in self.switches
         ]
         habit_core.save_result(results)
 
         done = sum(r["done"] for r in results)
         total = len(results)
-        toga.Window.info_dialog(
+        self.main_window.info_dialog(
             "Saved",
             f"You completed {done}/{total} habits today!"
         )
