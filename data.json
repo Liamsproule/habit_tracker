@@ -1,0 +1,57 @@
+[
+  {
+    "habit": "3 sets",
+    "done": true
+  },
+  {
+    "date": "2025-07-13",
+    "results": [
+      {
+        "habit": "3 sets",
+        "done": true
+      },
+      {
+        "habit": "Learning",
+        "done": true
+      },
+      {
+        "habit": "Eat well",
+        "done": true
+      }
+    ]
+  },
+  {
+    "date": "2025-07-13",
+    "results": [
+      {
+        "habit": "3 sets",
+        "done": false
+      },
+      {
+        "habit": "Learning",
+        "done": true
+      },
+      {
+        "habit": "Eat well",
+        "done": true
+      }
+    ]
+  },
+  {
+    "date": "2025-07-13",
+    "results": [
+      {
+        "habit": "3 sets",
+        "done": true
+      },
+      {
+        "habit": "Learning",
+        "done": true
+      },
+      {
+        "habit": "Eat well",
+        "done": true
+      }
+    ]
+  }
+]
