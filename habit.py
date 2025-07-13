@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 from datetime import date
+DATA_FILE = Path("data.json")
 
 print("Welcome to Habit Tracker!")
 
@@ -11,19 +12,16 @@ for h in HABITS:
     ans = input(f"Did you do '{h}' today? (y/n) ")
     results.append({"habit": h, "done": ans.lower() == "y"})
 
-
-DATA_FILE = Path("data.json")
-
 def save_result(today_results):
     if DATA_FILE.exists():
-        with DATA_FILE.open() as f:
+        with DATA_FILE.open("w", encoding="utf-8") as f:
             data = json.load(f)
     else:
         data = []
 
     data.append({"date": str(date.today()), "results": today_results})
 
-    with DATA_FILE.open("w") as f:
+    with DATA_FILE.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
 
 save_result(results)
